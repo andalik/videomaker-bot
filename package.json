@@ -1,0 +1,19 @@
+{
+  "name": "videomaker-bot",
+  "version": "1.0.0",
+  "description": "Repositório público do projeto Video Maker Bot que a partir de uma tema, cria um vídeo de maneira automatizada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andalik/videomaker-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andalik/videomaker-bot/issues"
+  },
+  "homepage": "https://github.com/andalik/videomaker-bot#readme"
+}
