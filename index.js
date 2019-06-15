@@ -1,13 +1,18 @@
 // Orquestrador
 
 const readline = require('readline-sync')
+const robots = {
+    text: require('./robots/text.js')
+}
 
-function start() {
+async function start() {
     // definição do objeto content (estrutura de dados)
     const content = {}
 
     content.searchTerm = askAndReturnSearchTerm()
     content.prefix = askAndReturnPrefix()
+
+    await robots.text(content)
 
     // askAndReturnSearchTerm
     function askAndReturnSearchTerm() {
