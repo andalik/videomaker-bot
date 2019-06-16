@@ -10,9 +10,14 @@ async function robot(content) {
     breakContentIntoSentences(content)
 
     async function fetchContentFromWikipedia(content) {
+        const wikipediaParserInput = {
+            "articleName": content.searchTerm,
+            "lang": content.language
+        }
+
         const algorithmiaAuthenticated = algorithmia(algorithmiaApiKey)
         const wikipediaAlgorithm = algorithmiaAuthenticated.algo('web/WikipediaParser/0.1.2')
-        const wikipediaResponse = await wikipediaAlgorithm.pipe(content.searchTerm)
+        const wikipediaResponse = await wikipediaAlgorithm.pipe(wikipediaParserInput)
         const wikipediaContent = wikipediaResponse.get()
 
         content.sourceContentOriginal = wikipediaContent.content
