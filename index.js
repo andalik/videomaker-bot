@@ -7,7 +7,9 @@ const robots = {
 
 async function start() {
     // definição do objeto content (estrutura de dados)
-    const content = {}
+    const content = {
+        maximumSentences: 10
+    }
 
     console.log('Video Maker Bot')
     console.log(' by Andalik Industries')
@@ -41,7 +43,7 @@ async function start() {
         return selectedPrefixText
     }
 
-    console.log(content)
+    console.log(JSON.stringify(content, null, 4))
 }
 
-start()
+start() 
