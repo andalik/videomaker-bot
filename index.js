@@ -1,6 +1,7 @@
 // Orquestrador
 
 const readline = require('readline-sync')
+const rssParser = require('rss-parser')
 const robots = {
     text: require('./robots/text.js')
 }
@@ -13,7 +14,7 @@ async function start() {
     console.log(' by Andalik Industries')
 
     content.language = askAndReturnLanguage()
-    content.searchTerm = askAndReturnSearchTerm()
+    content.searchTerm = await askAndReturnSearchTerm()
     content.prefix = askAndReturnPrefix()
 
     await robots.text(content)
@@ -24,12 +25,41 @@ async function start() {
         const selectLanguageIndex = readline.keyInSelect(languages, 'Selecione o idioma da pesquisa: ')
         const selectLanguageText = languages[selectLanguageIndex]
 
+        if(selectLanguageText === 'pt') {
+            content.geoGoogleTrends = 'BR' 
+        }
+        else {
+            content.geoGoogleTrends = 'US'
+        }
+
         return selectLanguageText
     }
 
     // askAndReturnSearchTerm
-    function askAndReturnSearchTerm() {
-        return readline.question('Digite o termo de busca na Wikipedia: ')
+    async function askAndReturnSearchTerm() {
+        const searchTermTyped = readline.question('Digite o termo de busca ou G para listar Google Trends: ')
+
+        return (searchTermTyped.toUpperCase() === 'G') ?  await askAndReturnGoogleTrends() : searchTermTyped
+    }
+
+    // askAndReturnGoogleTrends
+    async function askAndReturnGoogleTrends() {
+        console.log('Obtendo Google Trends. Aguarde...')
+
+        const googleTrends = await getGoogleTrends()
+        const selectedGoogleTrendsIndex = readline.keyInSelect(googleTrends, 'Selecione uma opção: ')
+
+        return googleTrends[selectedGoogleTrendsIndex] 
+    }
+
+    // getGoogleTrends
+    async function getGoogleTrends() {
+        const GOOGLE_TRENDS_URL = 'https://trends.google.com/trends/trendingsearches/daily/rss?geo=' + content.geoGoogleTrends
+
+        const parser = new rssParser()
+        const googleTrends = await parser.parseURL(GOOGLE_TRENDS_URL)
+
+        return googleTrends.items.map(({title}) => title) 
     }
 
     // askAndReturnPrefix
