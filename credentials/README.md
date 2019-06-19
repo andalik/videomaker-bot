@@ -1,4 +1,5 @@
-# Credentials format
+# Formato dos arquivos de credenciais
+Após clonar o repositório, acesse a pasta /credentials e crie os arquivos abaixo com as API Keys obtidas através dos serviços Algorithmia e IBM Cloud.
 
 ## Algorithmia
 
