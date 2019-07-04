@@ -1,2 +1,8 @@
-# videomaker-bot
-Repositório público do projeto Video Maker Bot que a partir de uma tema, cria um vídeo de maneira automatizada
+<pre>
+ _    ___     __              __  ___      __                ____        __ 
+| |  / (_)___/ /__  ____     /  |/  /___ _/ /_____  _____   / __ )____  / /_
+| | / / / __  / _ \/ __ \   / /|_/ / __ `/ //_/ _ \/ ___/  / __  / __ \/ __/
+| |/ / / /_/ /  __/ /_/ /  / /  / / /_/ / ,< /  __/ /     / /_/ / /_/ / /_  
+|___/_/\__,_/\___/\____/  /_/  /_/\__,_/_/|_|\___/_/     /_____/\____/\__/  
+by Andalik Industries                                                                         
+</pre>
