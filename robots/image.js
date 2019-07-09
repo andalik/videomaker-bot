@@ -13,7 +13,7 @@ async function robot() {
 
     async function fetchImagesOfAllSentences(content) {
         for (const sentence of content.sentences) {
-            // compondo string de busca no Google 'termo de busca AND watson keyword 0 AND watson keyword 1'
+            // compondo string de busca no Google 'termo de busca AND watson-keyword 0 AND watson-keyword 1'
             const query = `${content.searchTerm} AND ${sentence.keywords[0]} AND ${sentence.keywords[1]}`
             sentence.images = await fetchGoogleAndReturnImagesLinks(query)
 
