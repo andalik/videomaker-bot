@@ -7,7 +7,6 @@
 by Andalik Industries                                                                         
 </pre>
 
-Repositório público do projeto Video Maker Bot que cria vídeos para o Youtube automagicamente à partir de um tema fornecido.
 
 O **Video Maker Bot** é um projeto conceitual para criação automática de vídeos para o Youtube utilizando inúmeras tecnologias distintas.
 
