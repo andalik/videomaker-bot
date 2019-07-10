@@ -26,14 +26,52 @@ As tecnologias utilizadas neste projeto são:
 - Node (https://nodejs.org)
 
 # Instalação
-## Clonando o Repositório ##
+## Clonar repositório ##
 ```
 git clone https://github.com/andalik/videomaker-bot.git
 cd videomaker-bot
 npm install
 ```
 
-## Api: Algorithmia ##
+# Credenciais de acesso aos serviços (chaves de API)
+Após clonar o repositório, acesse a pasta /credentials e crie os arquivos abaixo com as API Keys obtidas através dos serviços Algorithmia, IBM Cloud e Google Cloud Platform.
+
+## Formato dos arquivos de credenciais
+### Algorithmia
+
+Arquivo: `algorithmia.json`
+
+```
+{
+  "apiKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
+```
+
+### IBM Cloud
+Arquivo: `watson-nlu.json`
+
+```
+{
+  "apikey": "xxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:natural-language-understanding:us-south:a/ffcb2c250e19bc335de2e9f1533711c8:4423b565-1e77-4d4c-a56e-656b3af7ac0d::",
+  "iam_apikey_name": "auto-generated-apikey-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/ffcb2c250e19bc335de2e9f1533711c8::serviceid:ServiceId-3b990ca3-62e6-4445-b303-84239f956d01",
+  "url": "https://gateway.watsonplatform.net/natural-language-understanding/api"
+}
+```
+
+### Google Cloud Platform
+Arquivo: `google-search.json`
+```
+{
+    "apiKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "searchEngineId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
+```
+
+# Como/onde ativar os serviços e obter as chaves de API
+## Algorithmia ##
 É necessário criar a sua chave de acesso para poder testar os robôs, pra isso você precisa acessar o site do [Algorithmia](https://algorithmia.com/), aqui não tem muito segredo, basta acessar e se cadastrar, depois de logar na sua conta, na Dashboard procure no menu **Api Keys** e **copie**.
 
 ![Algorithmin](https://i.imgsafe.org/ba/ba1d23897c.gif)
@@ -45,7 +83,7 @@ vá até a pasta do projeto onde você clonou o repositório, navegue até a pas
 }
 ```
 
-## Api: Watson ##
+## IBM Cloud ##
 Você precisa criar também as credenciais do *Watson* no site da [IBM](https://cloud.ibm.com/login), também não tem segredo, basta se cadastrar, quando estiver logado no menu superior clique em **Catálogo**, depois dentro de **IA** procure por *Natural Language Understanding*
 
 ![IBM](https://i.imgsafe.org/ba/bab0fc4ecd.jpeg)
@@ -66,7 +104,7 @@ Novamente, voltando na pasta do projeto ainda dentro da pasta **video-maker\cred
 }
 ```
 
-## Setup: Google Cloud Plataform ##
+## Google Cloud Platform ##
 Antes de criarmos as api's que iremos utilizar é necessário vincular a nossa conta do Google com o [Google Cloud Plataform](https://cloud.google.com/), na página do **Google Cloud Plataform** você irá clicar no botão **Faça uma Avaliação Gratuita**:
 
 ![google-cloud](https://i.imgsafe.org/61/61ce83ca22.png)
@@ -79,8 +117,6 @@ Antes de criarmos as api's que iremos utilizar é necessário vincular a nossa c
 
 ![google-cloud-pay](https://i.imgsafe.org/62/6253ce8142.jpeg)
 
-## Criando o Projeto ##
-
 Agora é a hora de criarmos um projeto que iremos vincular as Api's que vamos utilizar, para isso basta clicar no menu do topo da página "**Selecionar projeto**" e depois em "**Novo Projeto**":
 
 ![image](https://user-images.githubusercontent.com/34013325/55571155-52e3d400-56db-11e9-998f-bd99ab647403.png)
@@ -92,8 +128,6 @@ de um nome ao projeto e clique no botão **criar:**
 após isso o projeto começará a ser criado e assim que terminar um menu vai aparecer com o projeto que acabamos de criar então você irá seleciona-lo:
 
 ![image](https://user-images.githubusercontent.com/34013325/55571506-064cc880-56dc-11e9-804b-f14003dccc09.png)
-
-## Api: Custom Search API ##
 
 Com o projeto criado agora é hora de habilitarmos e configurarmos a Api, você irá clicar no menu lateral esquerdo no topo navegar até **API's e Serviços** > **Bibliotecas**:
 
@@ -111,15 +145,10 @@ Procure por **Custom Search API** no dropdown e clique em "**Preciso de quais cr
 
 ![image](https://user-images.githubusercontent.com/34013325/55572958-2cc03300-56df-11e9-8bc1-17641ba5138e.png)
 
-Após isso irá aparecer sua Api Key, você vai copia-la e clicar no botão concluir, voltando a pasta do projeto você vai navegar até **video-maker/credentials** e irá criar um novo arquivo chamado **google-search.json** com o conteúdo abaixo:
+Após isso irá aparecer sua Api Key, você vai copia-la e clicar no botão concluir, voltando a pasta do projeto você vai navegar até **video-maker/credentials** e irá criar um novo arquivo chamado **google-search.json**
 
-```
-{
-  "apiKey": "API_KEY_AQUI"
-}
-```
 
-## Api: Custom Search Enginer ##
+### Custom Search ###
 Agora iremos configurar o nosso motor de busca personalizado do google, para isso você vai acessar o [Custom Search Engine](https://cse.google.com/cse/create/new), e irá informar o **site a pesquisar** coloque **google.com**, ire selecionar o idioma que preferir, e por fim clique em **Opções avançadas** e para o esquema iremos utilizar o mais genérico **Thing**, pronto tudo preenchido você irá clicar em **criar**:
 
 ![image](https://user-images.githubusercontent.com/34013325/55578410-38662680-56ec-11e9-80ea-06ff9e25ba3f.png)
@@ -141,8 +170,7 @@ Voltando no arquivo **google-search.json** iremos criar uma nova propriedade e i
 }
 ```
 
-## Api: YouTube ##
-
+# YouTube
 Chegou a hora de configurarmos a api do youtube!, como fizemos na api custom search iremos fazer o mesmo com a api do YoutTube, então basta acessar o [Google Cloud](https://cloud.google.com/) e habilitar o serviço do YouTube, clicando no menu Lateral **Apis e Serviços -> Biblioteca**, na caixa de pesquisa procure por **YouTube**, e click no botão Ativar: 
 
 ![ezgif-5-fa13fd3c8407](https://user-images.githubusercontent.com/34013325/57034414-d08cf800-6c25-11e9-9867-03024a30028a.gif)
