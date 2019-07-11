@@ -25,7 +25,7 @@ As tecnologias utilizadas neste projeto são:
 - Node (https://nodejs.org)
 
 ## Estrutura de dados
-Visando flexibilidade na troca dos dados entre os robôs, definimos a estrutura de dados listada nesta [Issue](https://github.com/andalik/videomaker-bot/issues/5).
+Visando flexibilidade na troca dos dados entre os robôs, a estrutura de dados listada nesta [Issue](https://github.com/andalik/videomaker-bot/issues/5) é utilizada.
 
 ## Instalação
 ```
@@ -78,7 +78,7 @@ Siga os passos abaixo:
 ### Algorithmia
 Acesse o Algorithmia em https://algorithmia.com/ e autentique-se na plataforma. Clique em Home, e no menu central, selecione API Keys. Por fim, copie a chave de API. 
 
-![Algorithmin](https://i.imgsafe.org/ba/ba1d23897c.gif)
+![Algorithmia](https://github.com/andalik/videomaker-bot/images/)
 
 ### IBM Cloud
 Você precisa criar também as credenciais do *Watson* no site da [IBM](https://cloud.ibm.com/login), também não tem segredo, basta se cadastrar, quando estiver logado no menu superior clique em **Catálogo**, depois dentro de **IA** procure por *Natural Language Understanding*
