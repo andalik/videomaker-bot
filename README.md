@@ -35,7 +35,7 @@ npm install
 ```
 
 ## Credenciais de acesso aos serviços (API Keys)
-Após clonar o repositório, acesse a pasta /credentials e crie os arquivos abaixo com as API Keys obtidas através dos serviços Algorithmia, IBM Cloud e Google Cloud Platform.
+Após clonar o repositório, acesse a pasta /credentials e crie os arquivos abaixo com as chaves de API obtidas através dos serviços Algorithmia, IBM Cloud e Google Cloud Platform.
 
 ### Formato dos arquivos de credenciais
 ### Algorithmia
@@ -74,9 +74,9 @@ Arquivo: `google-search.json`
 Ainda não possui as chaves de API dos serviços?
 Siga os passos abaixo:
 
-## Como/onde ativar os serviços e obter as chaves de API
+## Como ativar os serviços e obter as chaves de API
 ### Algorithmia
-Acesse o Algorithmia em https://algorithmia.com/ e autentique-se na plataforma. Clique em Home, e no menu central selecione API Keys. Por fim, copie a chave de API. 
+Acesse o Algorithmia em https://algorithmia.com/ e autentique-se na plataforma. Clique em Home, e no menu central, selecione API Keys. Por fim, copie a chave de API. 
 
 ![Algorithmin](https://i.imgsafe.org/ba/ba1d23897c.gif)
 
