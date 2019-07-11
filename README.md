@@ -7,7 +7,7 @@
 </pre>
 
 
-O **Video Maker Bot** é um projeto conceitual para a criação automática de vídeos para o Youtube, utilizando e integrando inúmeras tecnologias.
+O **Video Maker Bot** é um projeto conceitual para a criação automática de vídeos para o Youtube utilizando e integrando inúmeras tecnologias.
 
 À partir de um orquestrador, quatro robôs com funções bem específicas são executados para pesquisar textos na Wikipedia, baixar imagens relacionadas ao tema escolhido, tratar as imagens obtidas, compor um vídeo com animação e áudio, renderizar, realizar upload do vídeo, e na plataforma Youtube, definir o título, a descrição e as tags do vídeo. 
 
@@ -20,6 +20,12 @@ As tecnologias utilizadas neste projeto são:
 - ImageMagick (tratamento de imagens),
 - Adobe After Effects (renderização do vídeo em modo headless),
 - Google APIs Node.js Client (autenticação por OAuth e upload do vídeo para o Youtube),
+
+# Escopo do projeto
+https://github.com/andalik/videomaker-bot/issues/5
+
+# Estrutura de dados
+
 
 # Pré-requisitos
 - Node (https://nodejs.org)
