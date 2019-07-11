@@ -7,7 +7,7 @@
 </pre>
 
 
-O **Video Maker Bot** é um projeto conceitual para criação automática de vídeos para o Youtube utilizando inúmeras tecnologias distintas.
+O **Video Maker Bot** é um projeto conceitual para a criação automática de vídeos para o Youtube, utilizando e integrando inúmeras tecnologias.
 
 À partir de um orquestrador, quatro robôs com funções bem específicas são executados para pesquisar textos na Wikipedia, baixar imagens relacionadas ao tema escolhido, tratar as imagens obtidas, compor um vídeo com animação e áudio, renderizar, realizar upload do vídeo, e na plataforma Youtube, definir o título, a descrição e as tags do vídeo. 
 
