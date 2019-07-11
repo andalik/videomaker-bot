@@ -75,13 +75,6 @@ Acesse o Algorithmia em https://algorithmia.com/ e autentique-se na plataforma. 
 
 ![Algorithmin](https://i.imgsafe.org/ba/ba1d23897c.gif)
 
-vá até a pasta do projeto onde você clonou o repositório, navegue até a pasta **video-maker\credentials**, crie um arquivo de texto e renomeie para `algorithmia.json`, dentro desse arquivo você irá colocar a `API` que copiou do site **Algorithmia** na estrutura abaixo:
-``` js
-{
-  "apiKey": "API_KEY_AQUI"
-}
-```
-
 ## IBM Cloud ##
 Você precisa criar também as credenciais do *Watson* no site da [IBM](https://cloud.ibm.com/login), também não tem segredo, basta se cadastrar, quando estiver logado no menu superior clique em **Catálogo**, depois dentro de **IA** procure por *Natural Language Understanding*
 
