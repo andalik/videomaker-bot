@@ -4,7 +4,6 @@
 | | / / / __  / _ \/ __ \   / /|_/ / __ `/ //_/ _ \/ ___/  / __  / __ \/ __/
 | |/ / / /_/ /  __/ /_/ /  / /  / / /_/ / ,< /  __/ /     / /_/ / /_/ / /_  
 |___/_/\__,_/\___/\____/  /_/  /_/\__,_/_/|_|\___/_/     /_____/\____/\__/  
-by Andalik Industries                                                                         
 </pre>
 
 
@@ -72,7 +71,7 @@ Arquivo: `google-search.json`
 
 # Como/onde ativar os serviços e obter as chaves de API
 ## Algorithmia ##
-É necessário criar a sua chave de acesso para poder testar os robôs, pra isso você precisa acessar o site do [Algorithmia](https://algorithmia.com/), aqui não tem muito segredo, basta acessar e se cadastrar, depois de logar na sua conta, na Dashboard procure no menu **Api Keys** e **copie**.
+Acesse o Algorithmia em https://algorithmia.com/ e autentique-se na plataforma. Clique em Home, e no menu central selecione API Keys. Por fim, copie a chave de API. 
 
 ![Algorithmin](https://i.imgsafe.org/ba/ba1d23897c.gif)
 
