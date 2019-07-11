@@ -71,7 +71,7 @@ Arquivo: `google-search.json`
 }
 ```
 
-Ainda não possui as chaves de API dos serviços listados? 
+Ainda não possui as chaves de API dos serviços?
 Siga os passos abaixo:
 
 ## Como/onde ativar os serviços e obter as chaves de API
