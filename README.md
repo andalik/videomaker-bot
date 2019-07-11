@@ -21,11 +21,11 @@ As tecnologias utilizadas neste projeto são:
 - Adobe After Effects (renderização do vídeo em modo headless),
 - Google APIs Node.js Client (autenticação por OAuth e upload do vídeo para o Youtube),
 
-## Estrutura de dados
-[Issue](https://github.com/andalik/videomaker-bot/issues/5) com a definição da estrutura de dados
-
 ## Pré-requisitos
 - Node (https://nodejs.org)
+
+## Estrutura de dados
+Visando flexibilidade na troca dos dados entre os robôs, definimos a estrutura de dados listada nesta [Issue](https://github.com/andalik/videomaker-bot/issues/5).
 
 ## Instalação
 ```
@@ -34,7 +34,7 @@ cd videomaker-bot
 npm install
 ```
 
-## Credenciais de acesso aos serviços (chaves de API)
+## Credenciais de acesso aos serviços (API Keys)
 Após clonar o repositório, acesse a pasta /credentials e crie os arquivos abaixo com as API Keys obtidas através dos serviços Algorithmia, IBM Cloud e Google Cloud Platform.
 
 ### Formato dos arquivos de credenciais
@@ -54,10 +54,10 @@ Arquivo: `watson-nlu.json`
 ```
 {
   "apikey": "xxxxxxxxxxxxxxxxxxxxxxxxxxx",
-  "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:natural-language-understanding:us-south:a/ffcb2c250e19bc335de2e9f1533711c8:4423b565-1e77-4d4c-a56e-656b3af7ac0d::",
+  "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:natural-language-understanding:us-south:a/xxxxxxxxxxxxxxxxxxxxxxxxxx:xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx::",
   "iam_apikey_name": "auto-generated-apikey-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
-  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/ffcb2c250e19bc335de2e9f1533711c8::serviceid:ServiceId-3b990ca3-62e6-4445-b303-84239f956d01",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/xxxxxxxxxxxxxxxxxxxxxxxxxxx::serviceid:ServiceId-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx",
   "url": "https://gateway.watsonplatform.net/natural-language-understanding/api"
 }
 ```
@@ -70,6 +70,9 @@ Arquivo: `google-search.json`
     "searchEngineId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 }
 ```
+
+Ainda não possui as chaves de API dos serviços listados? 
+Siga os passos abaixo:
 
 ## Como/onde ativar os serviços e obter as chaves de API
 ### Algorithmia
