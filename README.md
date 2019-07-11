@@ -21,27 +21,23 @@ As tecnologias utilizadas neste projeto são:
 - Adobe After Effects (renderização do vídeo em modo headless),
 - Google APIs Node.js Client (autenticação por OAuth e upload do vídeo para o Youtube),
 
-# Escopo do projeto
-https://github.com/andalik/videomaker-bot/issues/5
+## Estrutura de dados
+[Issue](https://github.com/andalik/videomaker-bot/issues/5) com a definição da estrutura de dados
 
-# Estrutura de dados
-
-
-# Pré-requisitos
+## Pré-requisitos
 - Node (https://nodejs.org)
 
-# Instalação
-## Clonar repositório ##
+## Instalação
 ```
 git clone https://github.com/andalik/videomaker-bot.git
 cd videomaker-bot
 npm install
 ```
 
-# Credenciais de acesso aos serviços (chaves de API)
+## Credenciais de acesso aos serviços (chaves de API)
 Após clonar o repositório, acesse a pasta /credentials e crie os arquivos abaixo com as API Keys obtidas através dos serviços Algorithmia, IBM Cloud e Google Cloud Platform.
 
-## Formato dos arquivos de credenciais
+### Formato dos arquivos de credenciais
 ### Algorithmia
 
 Arquivo: `algorithmia.json`
@@ -75,13 +71,13 @@ Arquivo: `google-search.json`
 }
 ```
 
-# Como/onde ativar os serviços e obter as chaves de API
-## Algorithmia ##
+## Como/onde ativar os serviços e obter as chaves de API
+### Algorithmia
 Acesse o Algorithmia em https://algorithmia.com/ e autentique-se na plataforma. Clique em Home, e no menu central selecione API Keys. Por fim, copie a chave de API. 
 
 ![Algorithmin](https://i.imgsafe.org/ba/ba1d23897c.gif)
 
-## IBM Cloud ##
+### IBM Cloud
 Você precisa criar também as credenciais do *Watson* no site da [IBM](https://cloud.ibm.com/login), também não tem segredo, basta se cadastrar, quando estiver logado no menu superior clique em **Catálogo**, depois dentro de **IA** procure por *Natural Language Understanding*
 
 ![IBM](https://i.imgsafe.org/ba/bab0fc4ecd.jpeg)
@@ -102,7 +98,7 @@ Novamente, voltando na pasta do projeto ainda dentro da pasta **video-maker\cred
 }
 ```
 
-## Google Cloud Platform ##
+### Google Cloud Platform
 Antes de criarmos as api's que iremos utilizar é necessário vincular a nossa conta do Google com o [Google Cloud Plataform](https://cloud.google.com/), na página do **Google Cloud Plataform** você irá clicar no botão **Faça uma Avaliação Gratuita**:
 
 ![google-cloud](https://i.imgsafe.org/61/61ce83ca22.png)
@@ -146,7 +142,7 @@ Procure por **Custom Search API** no dropdown e clique em "**Preciso de quais cr
 Após isso irá aparecer sua Api Key, você vai copia-la e clicar no botão concluir, voltando a pasta do projeto você vai navegar até **video-maker/credentials** e irá criar um novo arquivo chamado **google-search.json**
 
 
-### Custom Search ###
+## Custom Search
 Agora iremos configurar o nosso motor de busca personalizado do google, para isso você vai acessar o [Custom Search Engine](https://cse.google.com/cse/create/new), e irá informar o **site a pesquisar** coloque **google.com**, ire selecionar o idioma que preferir, e por fim clique em **Opções avançadas** e para o esquema iremos utilizar o mais genérico **Thing**, pronto tudo preenchido você irá clicar em **criar**:
 
 ![image](https://user-images.githubusercontent.com/34013325/55578410-38662680-56ec-11e9-80ea-06ff9e25ba3f.png)
@@ -168,7 +164,7 @@ Voltando no arquivo **google-search.json** iremos criar uma nova propriedade e i
 }
 ```
 
-# YouTube
+## YouTube
 Chegou a hora de configurarmos a api do youtube!, como fizemos na api custom search iremos fazer o mesmo com a api do YoutTube, então basta acessar o [Google Cloud](https://cloud.google.com/) e habilitar o serviço do YouTube, clicando no menu Lateral **Apis e Serviços -> Biblioteca**, na caixa de pesquisa procure por **YouTube**, e click no botão Ativar: 
 
 ![ezgif-5-fa13fd3c8407](https://user-images.githubusercontent.com/34013325/57034414-d08cf800-6c25-11e9-9867-03024a30028a.gif)
@@ -195,7 +191,7 @@ Após ser criada, irá aparecer uma janela com as credenciais, você pode dar ok
 
 renomeio o arquivo para **youtube.json** e salve dentro da pasta **video-maker/credentials** 😄
 
-## 1.., 2..., 3... Testando! ##
+## 1, 2, 3, Testando!
 Agora dentro da pasta **video-maker** você pode abrir o **cmd** ou **powershell** e executar o comando:
 ```
 node index.js
