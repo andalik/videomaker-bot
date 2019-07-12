@@ -76,30 +76,18 @@ Siga os passos abaixo:
 
 ## Como ativar os serviços e obter as chaves de API
 ### Algorithmia
-Acesse o Algorithmia em https://algorithmia.com/ e autentique-se na plataforma. Clique em Home, e no menu central, selecione API Keys. Por fim, copie a chave de API. 
+Acesse o **Algorithmia** em https://algorithmia.com/ e autentique-se na plataforma (se não possuir conta, cadastre-se). Clique em **Home**, e no menu central, selecione **API Keys**. Por fim, copie a chave de API. 
 
-![Algorithmia](https://github.com/andalik/videomaker-bot/images/)
+![Algorithmia](https://github.com/andalik/videomaker-bot/blob/master/docs/screenshots/screenshot-algorithmia-1.png)
 
 ### IBM Cloud
-Você precisa criar também as credenciais do *Watson* no site da [IBM](https://cloud.ibm.com/login), também não tem segredo, basta se cadastrar, quando estiver logado no menu superior clique em **Catálogo**, depois dentro de **IA** procure por *Natural Language Understanding*
+Acesse o **IBM Cloud** em https://cloud.ibm.com/login e autentique-se na plataforma (se não possuir conta, cadastre-se). No menu superior, clique em **Catalog**, selecione **AI** para filtrar as opções disponíveis e clique em **Natural Language Understanding**.
 
-![IBM](https://i.imgsafe.org/ba/bab0fc4ecd.jpeg)
+![IBMCloud](https://github.com/andalik/videomaker-bot/blob/master/docs/screenshots/screenshot-ibmcloud-1.png)
 
-clicando nele na nova página vai aparece um botão "criar" no final da página, uma vez que o serviço for criado, você será redirecionado para a página de gerenciamento do serviço que você acabou de criar, no menu lateral esquerdo procure por **Credenciais de Serviços** e depois clique em **Auto-generated service credentials** destacado abaixo, então copie as *Credenciais*:
+No rodapé da nova página, clique em **Create**. Você será redirecionado para a página de gerenciamento do serviço recém criado. No menu lateral esquerdo, selecione **Service Credentials** e em Actions, clique em **View Credentials**. Por fim, copie a chave de API.
 
-![IBM](https://i.imgsafe.org/ba/bace46f16b.jpeg)
-
-Novamente, voltando na pasta do projeto ainda dentro da pasta **video-maker\credentials** você ira criar um novo arquivo de texto com o nome `watson-nlu.json` e dentro desse arquivo você vai colar as credenciais que copiou anteriormente:
-``` js
-{
-  "apikey" : "...",
-  "iam_apikey_description" : "...",
-  "iam_apikey_name": "...",
-  "iam_role_crn": "...",
-  "iam_serviceid_crn": "...",
-  "url": "..."
-}
-```
+![IBMCloud](https://github.com/andalik/videomaker-bot/blob/master/docs/screenshots/screenshot-ibmcloud-2.png)
 
 ### Google Cloud Platform
 Antes de criarmos as api's que iremos utilizar é necessário vincular a nossa conta do Google com o [Google Cloud Plataform](https://cloud.google.com/), na página do **Google Cloud Plataform** você irá clicar no botão **Faça uma Avaliação Gratuita**:
@@ -158,15 +146,6 @@ Agora basta clicar em **Painel de Controle** na nova tela nós iremos habilitar 
 
 ![image](https://user-images.githubusercontent.com/34013325/55574920-0355d600-56e4-11e9-8f36-822a62224fab.png)
 
-Voltando no arquivo **google-search.json** iremos criar uma nova propriedade e iremos colar o código identificador do mecanismo de busca que criamos, identificado por `searchEngineId`, no final irá ficar assim:
-
-```
-{
-  "apiKey": "API_KEY_AQUI"
-  "searchEngineId": "ID_MECANISMO_DE_BUSCA"
-}
-```
-
 ## YouTube
 Chegou a hora de configurarmos a api do youtube!, como fizemos na api custom search iremos fazer o mesmo com a api do YoutTube, então basta acessar o [Google Cloud](https://cloud.google.com/) e habilitar o serviço do YouTube, clicando no menu Lateral **Apis e Serviços -> Biblioteca**, na caixa de pesquisa procure por **YouTube**, e click no botão Ativar: 
 
@@ -195,7 +174,7 @@ Após ser criada, irá aparecer uma janela com as credenciais, você pode dar ok
 renomeio o arquivo para **youtube.json** e salve dentro da pasta **video-maker/credentials** 😄
 
 ## 1, 2, 3, Testando!
-Agora dentro da pasta **video-maker** você pode abrir o **cmd** ou **powershell** e executar o comando:
+Abra o prompt de comando, acesse a pasta do projeto **videomaker-bot** e execute o comando abaixo:
 ```
 node index.js
 ```
