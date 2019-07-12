@@ -90,17 +90,9 @@ No rodapé da nova página, clique em **Create**. Você será redirecionado para
 ![IBMCloud](https://github.com/andalik/videomaker-bot/blob/master/docs/screenshots/screenshot-ibmcloud-2.png)
 
 ### Google Cloud Platform
-Antes de criarmos as api's que iremos utilizar é necessário vincular a nossa conta do Google com o [Google Cloud Plataform](https://cloud.google.com/), na página do **Google Cloud Plataform** você irá clicar no botão **Faça uma Avaliação Gratuita**:
+Antes de criarmos as api's que iremos utilizar é necessário vincular a nossa conta do Google com o [Google Cloud Plataform](https://cloud.google.com/), na página do **Google Cloud Plataform** você irá clicar no botão **Faça uma Avaliação Gratuita**.
 
-![google-cloud](https://i.imgsafe.org/61/61ce83ca22.png)
-
- em seguida marque a opção **Termos e Condições**
-
-![google-cloud-step1](https://i.imgsafe.org/62/621a2df511.png)
-
-> Ps.: É importante lembrar que alguns recursos do **Google Cloud Plataform** são **Pagos**, por esse motivo é necessário inserir as informações de pagamento, mas fique tranquilo porque iremos utilizar apenas os recursos **Gratuitos**
-
-![google-cloud-pay](https://i.imgsafe.org/62/6253ce8142.jpeg)
+É importante lembrar que alguns recursos do **Google Cloud Plataform** são **Pagos**, por esse motivo é necessário inserir as informações de pagamento, mas fique tranquilo porque iremos utilizar apenas os recursos **Gratuitos**
 
 Agora é a hora de criarmos um projeto que iremos vincular as Api's que vamos utilizar, para isso basta clicar no menu do topo da página "**Selecionar projeto**" e depois em "**Novo Projeto**":
 
