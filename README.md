@@ -109,12 +109,12 @@ Se quiser, pule esta etapa e crie uma [chave de API], um ID do cliente ou uma co
 ```
 clique no link do texto **chave de API**.
 
-Defina um nome para identificar a chave de API (Chave de API 1), e em restrições de aplicativo marque nenhuma. Por fim, clique em **CRIAR**.
+Defina um nome para identificar a chave de API (Chave de API 1), e em restrições de aplicativo marque **Nenhuma**. Por fim, clique em **CRIAR**.
 
 Anote a chave de API.
 
 ## Custom Search
-Agora, vamos criar o nosso motor de busca personalizado (CUSTOM SEARCH).
+Agora, vamos criar o nosso motor de busca personalizado (Custom Search).
 Para isso, acesse o Custom Search Engine em https://cse.google.com/cse/create/new.
 
 Em **Search Engine Name** escreva o nome do projeto (Video Maker Bot).
