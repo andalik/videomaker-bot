@@ -108,7 +108,8 @@ Ajudaremos você a a configurar as credenciais corretas
 Se quiser, pule esta etapa e crie uma [chave de API], um ID do cliente ou uma conta de serviço
 ```
 clique no link do texto **chave de API**.
-Defina um nome para identificar a chave de API (Chave de API 1), em restrições de aplicativo marque nenhuma, e clique em **CRIAR**.
+
+Defina um nome para identificar a chave de API (Chave de API 1), e em restrições de aplicativo marque nenhuma. Por fim, clique em **CRIAR**.
 
 Anote a chave de API.
 
@@ -117,11 +118,14 @@ Agora, vamos criar o nosso motor de busca personalizado (CUSTOM SEARCH).
 Para isso, acesse o Custom Search Engine em https://cse.google.com/cse/create/new.
 
 Em **Search Engine Name** escreva o nome do projeto (Video Maker Bot).
+
 Altere a opção **Image Search** para **ON**.
+
 Em **Sites to Search**, clique em **Add** e adicione **google.com**.
+
 Logo abaixo, em **Search the Entire Web**, altere para **ON**.
 
-Por fim, de posse da chave API obtida no passo anterior e do **Search Engine ID**, crie o arquivo de google-search.json em /credentials. 
+Por fim, de posse da chave API obtida no passo anterior e do **Search Engine ID**, crie o arquivo google-search.json em /credentials. 
 
 ## YouTube
 Chegou a hora de configurarmos a api do youtube!, como fizemos na api custom search iremos fazer o mesmo com a api do YoutTube, então basta acessar o [Google Cloud](https://cloud.google.com/) e habilitar o serviço do YouTube, clicando no menu Lateral **Apis e Serviços -> Biblioteca**, na caixa de pesquisa procure por **YouTube**, e click no botão Ativar: 
