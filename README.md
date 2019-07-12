@@ -90,51 +90,38 @@ No rodapé da nova página, clique em **Create**. Você será redirecionado para
 ![IBMCloud](https://github.com/andalik/videomaker-bot/blob/master/docs/screenshots/screenshot-ibmcloud-2.png)
 
 ### Google Cloud Platform
-Antes de criarmos as api's que iremos utilizar é necessário vincular a nossa conta do Google com o [Google Cloud Plataform](https://cloud.google.com/), na página do **Google Cloud Plataform** você irá clicar no botão **Faça uma Avaliação Gratuita**.
+Acesse o **Google Cloud Platform** em https://cloud.google.com e autentique-se na plataforma (se for o seu primeiro acesso, vincule a sua conta Google ao serviço). Em seguida, clique em **Go to console**.
 
-É importante lembrar que alguns recursos do **Google Cloud Plataform** são **Pagos**, por esse motivo é necessário inserir as informações de pagamento, mas fique tranquilo porque iremos utilizar apenas os recursos **Gratuitos**
+Clique no menu de navegação, selecione **APIs e serviços** e clique em **Biblioteca**.
 
-Agora é a hora de criarmos um projeto que iremos vincular as Api's que vamos utilizar, para isso basta clicar no menu do topo da página "**Selecionar projeto**" e depois em "**Novo Projeto**":
+![GoogleCloud](https://github.com/andalik/videomaker-bot/blob/master/docs/screenshots/screenshot-googlecloud-1.png)
 
-![image](https://user-images.githubusercontent.com/34013325/55571155-52e3d400-56db-11e9-998f-bd99ab647403.png)
+Em **Biblioteca de APIs**, procure e clique em **Custom Search API**.
 
-de um nome ao projeto e clique no botão **criar:**
+Ao abrir a página da API selecionada, clique em **ATIVAR**.
+Em seguida, clique em **ATIVAR CREDENCIAIS** para obter a chave de API.
 
-![image](https://user-images.githubusercontent.com/34013325/55571267-963e4280-56db-11e9-9b21-7f028caa05c1.png)
+No texto,
+```
+Descubra que tipos de credenciais você precisa
+Ajudaremos você a a configurar as credenciais corretas 
+Se quiser, pule esta etapa e crie uma [chave de API], um ID do cliente ou uma conta de serviço
+```
+clique no link do texto **chave de API**.
+Defina um nome para identificar a chave de API (Chave de API 1), em restrições de aplicativo marque nenhuma, e clique em **CRIAR**.
 
-após isso o projeto começará a ser criado e assim que terminar um menu vai aparecer com o projeto que acabamos de criar então você irá seleciona-lo:
-
-Com o projeto criado agora é hora de habilitarmos e configurarmos a Api, você irá clicar no menu lateral esquerdo no topo navegar até **API's e Serviços** > **Bibliotecas**:
-
-![image](https://user-images.githubusercontent.com/34013325/55572521-22ea0000-56de-11e9-89cc-f477fe18bf65.png)
-
-no campo de pesquisa basta procurar por **Custom Search API**, clicar em **Ativar**, e aguardar até a ativação da api:
-
-![image](https://user-images.githubusercontent.com/34013325/55572661-78bea800-56de-11e9-9ae3-fbc87758aa84.png)
-
-Após a ativação vai aparecer uma mensagem solicitando a criação das credenciais da API, então basta você clicar em **Criar Credenciais**:
-
-![image](https://user-images.githubusercontent.com/34013325/55572835-eb2f8800-56de-11e9-8292-fc3c4bf74084.png)
-
-Procure por **Custom Search API** no dropdown e clique em "**Preciso de quais credenciais?**"
-
-![image](https://user-images.githubusercontent.com/34013325/55572958-2cc03300-56df-11e9-8bc1-17641ba5138e.png)
-
-Após isso irá aparecer sua Api Key, você vai copia-la e clicar no botão concluir, voltando a pasta do projeto você vai navegar até **video-maker/credentials** e irá criar um novo arquivo chamado **google-search.json**
-
+Anote a chave de API.
 
 ## Custom Search
-Agora iremos configurar o nosso motor de busca personalizado do google, para isso você vai acessar o [Custom Search Engine](https://cse.google.com/cse/create/new), e irá informar o **site a pesquisar** coloque **google.com**, ire selecionar o idioma que preferir, e por fim clique em **Opções avançadas** e para o esquema iremos utilizar o mais genérico **Thing**, pronto tudo preenchido você irá clicar em **criar**:
+Agora, vamos criar o nosso motor de busca personalizado (CUSTOM SEARCH).
+Para isso, acesse o Custom Search Engine em https://cse.google.com/cse/create/new.
 
-![image](https://user-images.githubusercontent.com/34013325/55578410-38662680-56ec-11e9-80ea-06ff9e25ba3f.png)
+Em **Search Engine Name** escreva o nome do projeto (Video Maker Bot).
+Altere a opção **Image Search** para **ON**.
+Em **Sites to Search**, clique em **Add** e adicione **google.com**.
+Logo abaixo, em **Search the Entire Web**, altere para **ON**.
 
-Agora basta clicar em **Painel de Controle** na nova tela nós iremos habilitar a opção **Pesquisa de imagens** e depois iremos clicar no botão **Copiar para área de transferência**"
-
-![image](https://user-images.githubusercontent.com/34013325/55574756-8a567e80-56e3-11e9-99ea-d307547c781f.png)
-
-> Ps.: Existem diversas opções que eu aconselho futuramente você testar e descobrir o que cada uma dela faz 😋 
-
-![image](https://user-images.githubusercontent.com/34013325/55574920-0355d600-56e4-11e9-8f36-822a62224fab.png)
+Por fim, de posse da chave API obtida no passo anterior e do **Search Engine ID**, crie o arquivo de google-search.json em /credentials. 
 
 ## YouTube
 Chegou a hora de configurarmos a api do youtube!, como fizemos na api custom search iremos fazer o mesmo com a api do YoutTube, então basta acessar o [Google Cloud](https://cloud.google.com/) e habilitar o serviço do YouTube, clicando no menu Lateral **Apis e Serviços -> Biblioteca**, na caixa de pesquisa procure por **YouTube**, e click no botão Ativar: 
@@ -164,7 +151,7 @@ Após ser criada, irá aparecer uma janela com as credenciais, você pode dar ok
 renomeio o arquivo para **youtube.json** e salve dentro da pasta **video-maker/credentials** 😄
 
 ## 1, 2, 3, Testando!
-Abra o prompt de comando, acesse a pasta do projeto **videomaker-bot** e execute o comando abaixo:
+Abra o prompt de comando, acesse a pasta **videomaker-bot** e execute o programa:
 ```
 node index.js
 ```
