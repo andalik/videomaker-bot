@@ -146,15 +146,6 @@ Agora basta clicar em **Painel de Controle** na nova tela nós iremos habilitar 
 
 ![image](https://user-images.githubusercontent.com/34013325/55574920-0355d600-56e4-11e9-8f36-822a62224fab.png)
 
-Voltando no arquivo **google-search.json** iremos criar uma nova propriedade e iremos colar o código identificador do mecanismo de busca que criamos, identificado por `searchEngineId`, no final irá ficar assim:
-
-```
-{
-  "apiKey": "API_KEY_AQUI"
-  "searchEngineId": "ID_MECANISMO_DE_BUSCA"
-}
-```
-
 ## YouTube
 Chegou a hora de configurarmos a api do youtube!, como fizemos na api custom search iremos fazer o mesmo com a api do YoutTube, então basta acessar o [Google Cloud](https://cloud.google.com/) e habilitar o serviço do YouTube, clicando no menu Lateral **Apis e Serviços -> Biblioteca**, na caixa de pesquisa procure por **YouTube**, e click no botão Ativar: 
 
@@ -183,7 +174,7 @@ Após ser criada, irá aparecer uma janela com as credenciais, você pode dar ok
 renomeio o arquivo para **youtube.json** e salve dentro da pasta **video-maker/credentials** 😄
 
 ## 1, 2, 3, Testando!
-Agora dentro da pasta **video-maker** você pode abrir o **cmd** ou **powershell** e executar o comando:
+Abra o prompt de comando, acesse a pasta do projeto **videomaker-bot** e execute o comando abaixo:
 ```
 node index.js
 ```
